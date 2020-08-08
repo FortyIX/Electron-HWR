@@ -20,7 +20,7 @@ function createWindow(){
 
 
     const menu = Menu.buildFromTemplate(template)
-    Menu.setApplicationMenu(menu)
+    //Menu.setApplicationMenu(menu)
     window.loadFile('index.html')
 }
 
