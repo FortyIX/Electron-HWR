@@ -1,11 +1,12 @@
 const electron = require('electron');
 const {app, BrowserWindow, Menu, webContents} = require('electron');
 
+const tf  = require('@tensorflow/tfjs');
 
+const model_path = 'http://127.0.0.1:8080/test-model.json';
 
 let window = null;
-
-
+let model = null;
 
 function createWindow(){
     window = new BrowserWindow({
@@ -14,7 +15,7 @@ function createWindow(){
         resizable: false,
         webPreferences :{
             nodeIntegration : true
-        }
+        } 
     })
 
 
@@ -23,8 +24,9 @@ function createWindow(){
     window.loadFile('index.html')
 }
 
+
 var template = [
-    {
+  {
         label: 'Reset',
         click: function(){
         

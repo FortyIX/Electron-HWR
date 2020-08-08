@@ -1,15 +1,17 @@
+const tf  = require('@tensorflow/tfjs');
 window.$ = window.jQuery = require('jquery');
 
 
 
+ 
+
 //get the canvas for writing
 const canvas = $(".writing-panel")[0]
 
-const submit_btn = $(".submit-btn")
-submit_btn.on("click", (e) =>{
-
-    resetCanvas();
-
+$('.submit-btn').click( () => {
+    
+    //if (isModelLoaded ? predict(model) : alert("THe model is not yet loaded, please load the model from the left top menu"));
+    predict()
 })
 const context = canvas.getContext("2d");
 
