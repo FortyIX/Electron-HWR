@@ -3,7 +3,7 @@ const {app, BrowserWindow, Menu, webContents} = require('electron');
 
 const tf  = require('@tensorflow/tfjs');
 
-const model_path = 'http://127.0.0.1:8080/test-model.json';
+const model_path = 'http://127.0.0.1:8080/hwr-model.json';
 
 let window = null;
 let model = null;
