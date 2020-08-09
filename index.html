@@ -6,21 +6,23 @@
         <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
         <title>Handwriting Recognition</title>
 
-       
-        
+        <!-- stylesheet -->
         <link rel="stylesheet" href="./src/css/index.css">
-        
-        
-
     </head>
 
     <body>
+        
     <div class="mainBody">
+
+        <!-- MAIN WINDOW -->
         <div class = 'main-window'>
+            <!-- WRITING PANEL -->
             <canvas class = 'writing-panel'>
                 ERROR CODE : 100
             </canvas>
         </div>
+
+        <!-- INFORMAtION PANEL (DISPLAYING RESULT )-->
         <div class = 'info-panel'>
            <h5 class = 'result-title'>RESULT</h5> 
            <div class = 'result-text'>
@@ -28,13 +30,10 @@
            </div>
         
            <button class = 'submit-btn'>Recognize</button>
-           
-           
-
         </div>
     </div>
     
-    
+    <!-- Load the JavaScript file-->
     <script src="./src/js/init.js"></script>
     <script src="./src/js/actions.js"></script>
    

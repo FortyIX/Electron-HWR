@@ -3,11 +3,12 @@ const {app, BrowserWindow, Menu, webContents} = require('electron');
 
 const tf  = require('@tensorflow/tfjs');
 
-const model_path = 'http://127.0.0.1:8080/test-model.json';
 
+//define the main window
 let window = null;
-let model = null;
 
+
+//created the main window
 function createWindow(){
     window = new BrowserWindow({
         width: 450,
@@ -18,13 +19,16 @@ function createWindow(){
         } 
     })
 
-
+    //load the custom menu bar
     const menu = Menu.buildFromTemplate(template)
-    //Menu.setApplicationMenu(menu)
+    Menu.setApplicationMenu(menu)
+
+    //load main window UI file
     window.loadFile('index.html')
 }
 
 
+//define te custom menu bar
 var template = [
   {
         label: 'Reset',
@@ -54,6 +58,7 @@ var template = [
 }];
 
 
+//render the main window
 app.whenReady().then(createWindow)
 
 
