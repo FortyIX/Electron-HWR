@@ -1,4 +1,4 @@
-# handwriting-recognition
+# Electron-HWR
 A electron app that recognize your handwriting with a CNN built with Tensorflow
 
 ## Setup 
