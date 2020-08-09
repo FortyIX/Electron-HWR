@@ -2,7 +2,7 @@
 // ipc.on('reset-signal', function(e,m){
 //     resetCanvas()
 // })
-model_path = 'http://127.0.0.1:8080/test-model.json';
+model_path = 'http://127.0.0.1:8080/hwr-model.json';
 const panel = $(".writing-panel")[0]
 var model = null
 
@@ -25,7 +25,8 @@ async function predict(){
         .div(255)
         .reshape([1, 28, 28, 1]);
     });
-    const pred = model.predict(input).argMax(1);
+    const result = model.predict(input).argMax(1).dataSync()[0];
+    $('.result').text(result)
 
-    alert(pred)
+    //alert(pred)
 }
