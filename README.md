@@ -8,8 +8,16 @@ you will need to install some npm package before you can run it as github does n
 
 ## Dependency
 ```
+npm install @tensorflow/tfjs
 npm install --save-dev electron
-npm install jquery 
+npm install jquery http-server
+
+```
+
+## Create a server to host the model 
+you will have to host the model on localhost before you can start the app 
+```
+hs model --cors
 ```
 
 ## Start the app 
